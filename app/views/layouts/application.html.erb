@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TwitterRedesign</title>
+    <title>Twitter Redesign</title>
+    <link rel="shortcut icon" type="image/x-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAFHUlEQVRYha2Xf2wTZRjHX0SINUYUTeYfGDVqohJjTAjYjl8SgkIyjUgDW9lmDFlgGrUIEoWYkx8KMso6Nka3QTfsuvXt1iV07Tosbt3YKKzd2t7u3rte727LAqj8iFky/piJj3+Q067dut7gSZ4/Lu/zvN/PPfc8d+8hlIVRFvuzlAkvRgghi6VkQRXGz2WTl2wAMA8A5qnNQwghdPoX994ahydxrrV9/fkW984a7LnV0nJhabb5FkvJAiaeKI8y/LcY6+erBthn+XVRHfYEa53eiRqHJ2HBHrA4fGXZ5o+Fu14JE3k8zIqTsiCsUQ2AEEJ2V0exBXtA8TrsZc3nL27Cbvfy2XIZ6caqECtBiJUgwo82S3QwRzUAZcKLa52em8kQFuz5u9bpuUmdbHsqUy4tyGsVgBArAU3EzrF+rFENUW1vb0oBuO+OTmOmvARPipMBwqw4yYniMtUA9c1ew3QAtQ7PpZk6HADmRVi+ORkgxErASDdWqQY42dT1Yg1uv5cG4PTcnGk0JbbvhSEi/f5QKoApamEt7ghNV4XjDd3atHisnx/lpZrUu4/xcg/TVfWEagCgqEcq7T7fdADNbe0lqfEszxeFWXEyFSDMipMyx7w/JwCTze+aDuB0s+9kcqzADX0YJvJ4qrjiUSLghwpgsvldCN0vO8vzRZnEQ6wEgkB2qwbI1AMmm991N4QXMfFE+XRlT3UuET+QUUyigzkcxx2MEgFHWd4uC8PvYZNRU+fs+CtV/KyrAxwdgVuDROJnE04DKK7YYCgoy638+Fjuzh2H1r+uzPNwXLROaRwijw/z4g/JY3jW5YPu0DBcjnBZiSY7IUIeQgih3U3bnv/09LqNBtPqQ/kVOt/3TmNPmEn0XKWFabu35eLlfxQAd+CaauEQK8EQPxK9E7Q9mVZ2gYsZYvwIW+91XN5lzZvAnQ0QpIUpyUFaAHfgGti93Wlr2XiYyOMyGVg7a8N9bsl/7bvG0omf2r6GQHBgTnea6oNElrISV6y11yeVWvOgpHYTXOhtfSDxMCtOkjjZnLX41hMr3/qkes1tg1kHP7bthv22Qmj0Nvz3GNr7OqHGfwrOB6xwLUpmFI3y8pUoL18hcbJZ1WlIf3RFi8GsA4NZB2XN+6BvYBD22wrB6q+Gw84vQVkzmHVQas0DfLExrSeYeKIcU9TCLop6NGthhBByW6jH9aYVEUXgOD4AIVaCvoFBKLXmQVHVqikACoS/7/9eIcKIbbS38WlVwopZrdRjCkCBWTvhutoWUjZu/c0Bex2FUNdZBUfq98CR+j1wyn00rVHDRB6nBalKJLE353Qa3l628tz2ytwh/eF1y++G8CKGTziU57/fVgi9/f1Zj12Ml3siw9wxNjFaRAvyWoGJLBWYyNKMPaHVGzUYUwuV67F+rImxgjHCSWOtl2xQ4T3xAFMh3htkRYb4G55RXRmJDuZ09/Z98ZV9y+16/xkYiHHjQ/zo9SF+9HqEHxEinDQ26/uAFRlGYN5QLa5YiWXry/nl7/xpMOtgx7n1PQH3mVfvRG1L/qDtOVw08FKEE3szAUS4RNucxRFCyNj0wbIpU/CZ9qPk9Uyf5TArTsZYIeMpOiuAArN2QgEoKMutTI3BWD9/mJC8SHwkpIAMEolPcNy7c/5HVEyrN2ryK3Q+BaC4eo11ptixfqzhxZFNNCEVNE3vemBxxb5pNSzZ9vOKToNZB1sOaQ8+lE3VmlZv1BRXbDBsPLj67bnu8S89OGOosxDBeAAAAABJRU5ErkJggg==">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;700&display=swap" rel="stylesheet">
   </head>
 
   <body>
+    <%= render 'layouts/navbar' %>
     <%= yield %>
   </body>
 </html>
