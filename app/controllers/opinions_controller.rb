@@ -12,7 +12,7 @@ class OpinionsController < ApplicationController
   	  flash[:notice] = 'Opinion was created successfully'
       redirect_to root_path
   	else
-  	  flash.new[:alert] = 'Something went wrong...'
+  	  flash.now[:alert] = 'Something went wrong...'
   	end
   end
 
