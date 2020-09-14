@@ -2,8 +2,10 @@ class OpinionsController < ApplicationController
   before_action :require_user
 
   def index
+  	@opinion = Opinion.new
+  	@opinions = Opinion.order_by_most_recent
   end
-  
+
   def create
   	@opinion = current_user.opinions.build(opinion_params)
   	if @opinion.save
