@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root to: 'opinions#index'
   resources :users, only: %i[new create edit update]
   get 'sign_in', to: 'sessions#new'
   post 'sign_in', to: 'sessions#create'
