@@ -13,6 +13,8 @@
 
   <body>
     <%= render 'layouts/navbar' %>
+      <p class="flash bg-success"><%= flash.notice %></p>
+      <p class="flash bg-success"><%= flash.alert %></p>
     <%= yield %>
   </body>
 </html>

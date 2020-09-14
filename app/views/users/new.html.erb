@@ -1,11 +1,15 @@
 <div class="container">
   <div class="row ">
     <div class="d-sm-hidden col-md-6 col-lg-8">
-      
+      <ul class="row">
+        <% @user.errors.full_messages.each do |message| %>
+          <li class="col-12"><%= message %></li>
+        <% end %>
+      </ul>
     </div>
     <div class="col-sm-12 col-md-6 col-lg-4">
       <h3 class="text-center">Sign up</h3>
-      <%= form_for(@user, ) do |f| %>
+      <%= form_for(@user) do |f| %>
 
   <div class="form-group">
     <%= f.text_field :username, autocomplete: "username", class: "form-control", placeholder: "Username" %>
