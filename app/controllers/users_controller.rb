@@ -9,6 +9,8 @@ class UsersController < ApplicationController
   	@user = User.create(signup_params)
     if @user.save
       flash[:success] = 'Account is created sucessfully'
+      session[:username] = @user.username
+      redirect_to root_path
     else
       flash[:danger] = 'Something went wrong...'
       render 'new'
