@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :require_user, except: [:new, :create]
+
   def new
   	@user = User.new
   end
@@ -8,7 +10,7 @@ class UsersController < ApplicationController
     if @user.save
       flash[:success] = 'Account is created sucessfully'
     else
-      flash[:danger] = 'Something went wrong'
+      flash[:danger] = 'Something went wrong...'
       render 'new'
     end
   end
