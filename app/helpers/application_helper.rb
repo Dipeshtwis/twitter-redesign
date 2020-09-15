@@ -3,9 +3,9 @@ module ApplicationHelper
   	render partial: partial if logged_in?
   end
 
-  def profile_pic(user)
+  def profile_pic(user, size = '')
   	if user.photo.present?
-      image_tag(user.photo.to_s, alt: user.username, class: "pr-2")
+      image_tag(user.photo.to_s, alt: user.username, class: "pr-2 profile-img #{size}")
     else
       image_tag('https://source.unsplash.com/random/60x60',
                 alt: user.username, class: 'pr-2')

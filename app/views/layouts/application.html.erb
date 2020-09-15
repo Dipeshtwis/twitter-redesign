@@ -9,14 +9,29 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;700&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+    />
   </head>
 
   <body>
     <div class="container-fluid">
-    <%= after_login('shared/navbar') %>
+      <div class="row">
+      <%= after_login('shared/navbar') %>
+      <div class="col offset-2 mt-5" id="main">
+        <div class="row">
+          <div class="col-9 pr-5 "> 
+            <%= yield %>
+          </div>
+                <%= after_login('shared/right')%>
+                </div>
+            </div>
+      
+    </div>
   </div>
+
       <p class="flash bg-success"><%= flash.notice %></p>
       <p class="flash bg-success"><%= flash.alert %></p>
-    <%= yield %>
   </body>
 </html>

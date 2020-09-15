@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_attached_file :photo, styles: { large: '250x250', thumb: '60x60#' }
+  has_attached_file :photo, styles: { large: '250x250', thumb: '60x60' }
   has_attached_file :cover_image, styles: { large: '700x250'}
 
   validates :username, presence: true, uniqueness: true, length: { minimum: 3, maximum: 20}

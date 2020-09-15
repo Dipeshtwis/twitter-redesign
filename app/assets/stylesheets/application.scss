@@ -14,3 +14,89 @@
  *= require_self
  */
 @import "bootstrap";
+
+$dark-blue: #1c2a3d;
+$sky-blue: #54ace3;
+$text-dark: #6c8297;
+$text-light: #fafcfc;
+$text-gray: #b3b4b6;
+$black: #000;
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+.text-gray {
+  color: $text-gray;
+}
+
+.bg-custom-side {
+  background-color: $dark-blue;
+}
+
+.bg-custom-top {
+  background-color: $sky-blue;
+}
+
+.sidebar-links {
+  transition: all 0.3s ease-in-out;
+
+  &__anchor {
+    color: $text-dark;
+    text-transform: uppercase;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__icon {
+    fill: $text-dark;
+    width: 20px;
+    height: 20px;
+  }
+
+  &:hover {
+    background-color: $sky-blue;
+  }
+
+  &:hover &__anchor,
+  &:hover &__icon {
+    color: $text-light;
+    fill: $text-light;
+  }
+}
+
+.follow {
+  color: $text-light;
+  font-size: 11px;
+
+  small {
+    color: $text-dark;
+  }
+}
+
+.profile-img {
+  transform: scale(1);
+  transition: all 0.4s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.tweet-pic {
+  width: 4rem;
+}
+
+.cover_image {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+  }
+
+}
