@@ -12,7 +12,9 @@
   </head>
 
   <body>
-    <%= render 'layouts/navbar' %>
+    <div class="container-fluid">
+    <%= render 'shared/navbar' %>
+  </div>
       <p class="flash bg-success"><%= flash.notice %></p>
       <p class="flash bg-success"><%= flash.alert %></p>
     <%= yield %>
