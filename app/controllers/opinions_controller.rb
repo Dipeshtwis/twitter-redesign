@@ -4,6 +4,7 @@ class OpinionsController < ApplicationController
   def index
   	@opinion = Opinion.new
   	@opinions = Opinion.order_by_most_recent
+    @who_to_follow = current_user.who_to_follow
   end
 
   def create

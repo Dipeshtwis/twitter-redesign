@@ -24,7 +24,7 @@ $black: #000;
 
 body {
   font-family: "Poppins", sans-serif;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .text-gray {
@@ -99,4 +99,14 @@ body {
     width: 100%;
   }
 
+}
+
+.follow-content {
+  width: 100%;
+}
+
+.who-to-follow {
+  .follow-content {
+    line-height: 1rem;
+  }
 }

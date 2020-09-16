@@ -17,8 +17,8 @@ class UsersController < ApplicationController
   end
 
   def show
-  	@user = User.find(username: params[:username])
-    @opinion = Opininon.new
+  	@user = User.find_by(username: params[:username])
+    @opinion = Opinion.new
     @opinions = @user.opinions.order_by_most_recent
   end
 
