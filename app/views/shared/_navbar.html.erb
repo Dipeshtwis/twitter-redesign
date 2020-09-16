@@ -2,7 +2,7 @@
             <div class="nav flex-column flex-nowrap vh-100 overflow-auto text-white p-2">
         <div class="user-photo d-flex flex-wrap align-items-center p-2 border-bottom border-dark">
             <%= profile_pic(current_user) %>
-            <%= current_user.fullname %> 
+            <%= link_to current_user.fullname, profile_path(current_user.username) %> 
         </div>
 
         <div class="user-photo d-flex flex-wrap justify-content-between p-2 border-bottom border-dark">
