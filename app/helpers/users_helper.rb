@@ -10,4 +10,8 @@ module UsersHelper
       res.html_safe
     end
   end
+
+  def follow_me(usr)
+    return if current_user == usr || current_user.follows.include?(usr)
+  end
 end

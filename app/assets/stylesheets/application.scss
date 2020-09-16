@@ -90,6 +90,10 @@ body {
   width: 4rem;
 }
 
+.profile-photo {
+  width: 8rem;
+}
+
 .cover_image {
   width: 100%;
   height: 250px;
@@ -108,5 +112,29 @@ body {
 .who-to-follow {
   .follow-content {
     line-height: 1rem;
+  }
+}
+
+.user-name-p {
+  color: $black;
+
+  &:hover {
+    color: $black;
+  }
+}
+
+.user-name {
+  color: $text-light;
+  font-size: 18px;
+  text-align: center;
+  transform: translateY(0);
+  text-shadow: 0 1px 2px rgba($color: $black, $alpha: 0.9);
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    color: $text-light;
+    text-decoration: none;
+    text-shadow: 0 1px 1px rgba($color: $black, $alpha: 0.95);
+    transform: translateY(1px);
   }
 }
