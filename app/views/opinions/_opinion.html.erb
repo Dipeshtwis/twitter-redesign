@@ -3,7 +3,7 @@
     	<%= profile_pic(opinion.author, 'tweet-pic')%>
     </div>
     <div class="text ml-3">
-        <h6><strong><%= opinion.author.fullname %> </strong></h6>
+        <h6><strong><%= link_to opinion.author.fullname, profile_path(opinion.author.username) , class: "text-body" %> </strong></h6>
             <p class="card-text"><%= opinion.text %> </p>
     </div>
 </div>
