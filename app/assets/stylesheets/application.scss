@@ -103,7 +103,6 @@ body {
   img {
     width: 100%;
   }
-
 }
 
 .follow-content {
@@ -138,4 +137,8 @@ body {
     text-shadow: 0 1px 1px rgba($color: $black, $alpha: 0.95);
     transform: translateY(1px);
   }
+}
+
+.background {
+  // background-image: url("https://source.unsplash.com/random/750x450");
 }
