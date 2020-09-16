@@ -2,8 +2,34 @@
 <%= cover_pic(@user) %>
  </div>
 
+<div class="row">
+	<div class="col">
+		<nav class="navbar navbar-expand-lg navbar-light">
+  			<div class="container">
+  				<%= link_to 'Tweet', '#', class: "navbar-brand active border-bottom border-primary" %>
+    			<ul class="navbar-nav mr-auto">
+      			  <li class="nav-item">
+                  <%= link_to 'Photos', '#', class: "nav-link" %>
+      			</li>
+      			<li class="nav-item">
+        		<%= link_to 'Following', '#', class: "nav-link" %>
+      			</li>
+      			 <li class="nav-item">
+                  <%= link_to 'Followers', '#', class: "nav-link" %>
+      			</li>
+      			 <li class="nav-item">
+                  <%= link_to 'Favourites', '#', class: "nav-link" %>
+      			</li>
+      			 <li class="nav-item">
+                  <%= link_to 'Lists', '#', class: "nav-link" %>
+      			</li>
+    			</ul>
+  			</div>
+		</nav>
+</div>
+</div>
 
-<div class="card mb-5">
+<div class="card mb-5 mt-3">
     <div class="card-body">
     <h5 class="card-title border-bottom pb-3">SUGGEST BOOK TO <%= @user.fullname.upcase %></h5>
         <%= form_for(@opinion, url: opinion_path) do |f| %>

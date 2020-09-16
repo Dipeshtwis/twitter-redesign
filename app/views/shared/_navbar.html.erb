@@ -1,8 +1,8 @@
 <div class="col-2 px-1 bg-custom-side position-fixed" id="sticky-sidebar">
             <div class="nav flex-column flex-nowrap vh-100 overflow-auto text-white p-2">
         <div class="user-photo d-flex flex-wrap align-items-center p-2 border-bottom border-dark">
-            <%= profile_pic(current_user) %>
-            <%= link_to current_user.fullname, profile_path(current_user.username) %> 
+            <%= profile_pic(current_user, 'tweet-pic') %>
+            <%= link_to current_user.fullname, profile_path(current_user.username), class: "text-white" %> 
         </div>
 
         <div class="user-photo d-flex flex-wrap justify-content-between p-2 border-bottom border-dark">

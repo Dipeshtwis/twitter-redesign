@@ -1,8 +1,8 @@
-<div class="col-3 offset-7 px-1 bg-light position-fixed pt-5 pl-5 pr-4" id="sticky-sidebar">
+<div class="col-3 offset-7 border-left px-1 bg-light position-fixed pt-5 pl-5 pr-4" id="sticky-sidebar">
 <div class="text-center mb-5">
       <%= follow_me(@user, 'shared/follow') %>
       
-        <%= profile_pic(@user, 'profile-photo')%>
+        <%= profile_pic(@user, 'tweet-pic')%>
      
      <div class="user-info">
         <h5 class="mt-2"><%= link_to @user.fullname, profile_path(@user.username), class: "user-name-p" %> <br><small class="text-gray">@<%= @user.username %></small></h5>
