@@ -1,7 +1,7 @@
 module UsersHelper
   def show_follower(usr)
     res = ''
-    if usr.followers.count > 0
+    if usr.followers.count.positive?
       res << 'Followed by '
       res << link_to(usr.followers.first.fullname, profile_path(usr.followers.first.username))
       res.html_safe
@@ -14,6 +14,6 @@ module UsersHelper
   def follow_me(usr, partial)
     return if current_user == usr || current_user.follows.include?(usr)
 
-    render partial: partial, locals: {res: usr}
+    render partial: partial, locals: { res: usr }
   end
 end

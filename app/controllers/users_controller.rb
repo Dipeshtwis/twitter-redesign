@@ -1,12 +1,12 @@
 class UsersController < ApplicationController
-  before_action :require_user, except: [:new, :create]
+  before_action :require_user, except: %i[new create]
 
   def new
-  	@user = User.new
+    @user = User.new
   end
 
   def create
-  	@user = User.create(signup_params)
+    @user = User.create(signup_params)
     if @user.save
       flash[:success] = 'Account is created sucessfully'
       redirect_to root_path
@@ -17,7 +17,7 @@ class UsersController < ApplicationController
   end
 
   def show
-  	@user = User.find_by(username: params[:username])
+    @user = User.find_by(username: params[:username])
     @opinion = Opinion.new
     @opinions = @user.opinions.order_by_most_recent
   end
@@ -30,7 +30,7 @@ class UsersController < ApplicationController
     @user = current_user
     @user.update(signup_params)
 
-    flash.notice = "'#{user.username}' profile updated!"
+    flash.notice = "'#{@user.username}' profile updated!"
     redirect_to profile_path(@user.username)
   end
 
