@@ -21,9 +21,10 @@ module ApplicationHelper
   end
 
   def different_path_partial
-  	if logged_in?
-  	  render partial: 'shared/right' if params[:action] == 'index'
-      render partial: 'shared/profile_right' if params[:action] == 'show'
+  	if logged_in? && params[:action] == 'index'
+      render partial: 'shared/right'
+    elsif params[:action] == 'show'
+      render partial: 'shared/profile_right'
     end
   end
 end
