@@ -11,7 +11,9 @@ module UsersHelper
     end
   end
 
-  def follow_me(usr)
+  def follow_me(usr, partial)
     return if current_user == usr || current_user.follows.include?(usr)
+
+    render partial: partial, locals: {res: usr}
   end
 end
