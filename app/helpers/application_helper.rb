@@ -19,4 +19,11 @@ module ApplicationHelper
       image_tag('https://source.unsplash.com/random/700x250', alt: usr.username, class: 'pr-2')
     end
   end
+
+  def different_path_partial
+  	if logged_in?
+  	  render partial: 'shared/right' if params[:action] == 'index'
+      render partial: 'shared/profile_right' if params[:action] == 'show'
+    end
+  end
 end
