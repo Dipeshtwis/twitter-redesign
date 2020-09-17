@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_15_094841) do
+ActiveRecord::Schema.define(version: 2020_09_17_105944) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "comments", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "opinion_id"
+    t.text "content"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["opinion_id"], name: "index_comments_on_opinion_id"
+  end
 
   create_table "followings", force: :cascade do |t|
     t.integer "follower_id", null: false
@@ -45,5 +54,6 @@ ActiveRecord::Schema.define(version: 2020_09_15_094841) do
     t.datetime "cover_image_updated_at"
   end
 
+  add_foreign_key "comments", "users"
   add_foreign_key "opinions", "users", column: "author_id"
 end
