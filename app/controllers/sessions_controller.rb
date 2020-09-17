@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
       flash[:success] = 'successfully signed in'
       redirect_to root_path
     else
-      flash.now[:danger] = 'Something went wrong...'
+      flash.now[:alert] = 'Something went wrong...'
       render 'new'
     end
   end

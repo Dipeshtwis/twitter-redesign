@@ -11,7 +11,7 @@ class UsersController < ApplicationController
       flash[:success] = 'Account is created sucessfully'
       redirect_to root_path
     else
-      flash[:danger] = 'Something went wrong...'
+      flash[:alert] = 'Something went wrong...'
       render new_user_path
     end
   end
@@ -29,9 +29,13 @@ class UsersController < ApplicationController
   def update
     @user = current_user
     @user.update(signup_params)
-
-    flash.notice = "'#{@user.username}' profile updated!"
-    redirect_to profile_path(@user.username)
+    if @user.save
+      flash[:notice] = "'#{@user.username}' profile updated!"
+      redirect_to profile_path(@user.username)
+    else
+      flash[:alert] = 'Something went wrong ...'
+      render 'edit'
+    end
   end
 
   private

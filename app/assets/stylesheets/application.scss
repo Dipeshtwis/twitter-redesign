@@ -14,6 +14,7 @@
  *= require_self
  */
 @import "bootstrap";
+@import "toastr/toastr";
 
 $dark-blue: #1c2a3d;
 $sky-blue: #54ace3;
@@ -140,5 +141,5 @@ body {
 }
 
 .background {
-  background-image: url("https://source.unsplash.com/random/350x200");
+  background-image: url("https://source.unsplash.com/random/350x230");
 }

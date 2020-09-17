@@ -22,16 +22,15 @@
       <div class="col offset-2 mt-5" id="main">
         <div class="row">
           <div class="col-7 bg-light"> 
-            <%= yield %>
+            <%= yield %> 
           </div>
-                <%= different_path_partial %>
-                </div>
-            </div>
-      
+            <%= different_path_partial %>
+        </div>
+      </div>
     </div>
   </div>
 
-      <p class="flash bg-success"><%= flash.notice %></p>
-      <p class="flash bg-success"><%= flash.alert %></p>
+  <%= toastr_flash %>
+  
   </body>
 </html>
