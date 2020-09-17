@@ -14,10 +14,10 @@ module ApplicationHelper
 
   def cover_pic(usr)
     if usr.cover_image.present?
-      image_tag(usr.cover_image.to_s, alt: usr.username, class: 'pr-2')
+      image_tag(usr.cover_image.to_s, alt: usr.username)
     else
       image_tag('https://source.unsplash.com/random/750x250',
-                alt: usr.username, class: 'pr-2')
+                alt: usr.username)
     end
   end
 
