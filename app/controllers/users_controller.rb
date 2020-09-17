@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   def create
     @user = User.create(signup_params)
     if @user.save
-      flash[:success] = 'Account is created sucessfully'
+      flash[:notice] = 'Account is created sucessfully'
       redirect_to root_path
     else
       flash[:alert] = 'Something went wrong...'

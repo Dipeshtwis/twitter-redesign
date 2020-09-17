@@ -16,6 +16,18 @@
   </head>
 
   <body>
+    <%= toastr_flash %>
+    <% if notice.present? %>
+      <div class="notice">
+        <p> <%= notice %> </p>
+      </div>
+    <% end %>
+    <% if alert.present? %>
+      <div class="alert">
+        <p> <%= alert %> </p>
+      </div>
+    <% end %>
+
 <%= before_login('shared/main') %>
     <div class="container-fluid">
       <div class="row">
@@ -31,8 +43,6 @@
       </div>
     </div>
   </div>
-
-  <%= toastr_flash %>
 
   </body>
 </html>
