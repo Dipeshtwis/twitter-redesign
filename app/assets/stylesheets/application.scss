@@ -80,7 +80,7 @@ body {
 
 .profile-img {
   transform: scale(1);
-  transition: all 0.4s;
+  transition: all 0.5s;
 
   &:hover {
     transform: scale(1.1);
@@ -92,13 +92,9 @@ body {
   height: 4rem;
 }
 
-.profile-photo {
-  width: 8rem;
-}
-
 .cover_image {
   width: 100%;
-  height: 250px;
+  height: 260px;
   overflow: hidden;
 
   img {
