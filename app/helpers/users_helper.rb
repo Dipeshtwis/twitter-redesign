@@ -4,11 +4,10 @@ module UsersHelper
     if usr.followers.count.positive?
       res << 'Followed by '
       res << link_to(usr.followers.first.fullname, profile_path(usr.followers.first.username))
-      res.html_safe
     else
       res << '0 follower'
-      res.html_safe
     end
+    res.html_safe
   end
 
   def follow_me(usr, partial)
