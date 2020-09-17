@@ -29,12 +29,18 @@ This project is build for the Ruby on Rails capstone which is based on a redesig
 
 ## Screenshot <a name = "sc"></a>
 
-![screenshot](./app/assets/images/)
+### Home Page
+
+![screenshot](./app/assets/images/Book_Helper.png)
+
+### Profile Page
+
+![screenshot](./app/assets/images/Book_Helper_profile.png)
 
 
 ## Live Demo Link <a name = "ll"></a>
 
-[Live Demo]()
+[Live Demo](https://bookhelpy.herokuapp.com)
 
 
 ## Getting Started <a name = "gs"></a>
