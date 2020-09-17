@@ -16,11 +16,12 @@
   </head>
 
   <body>
-
+<%= before_login('shared/main') %>
     <div class="container-fluid">
       <div class="row">
       <%= after_login('shared/navbar') %>
       <div class="col offset-2 mt-5" id="main">
+        
         <div class="row">
           <div class="col-7 bg-light"> 
             <%= yield %> 

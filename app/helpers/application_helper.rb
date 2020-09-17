@@ -3,6 +3,10 @@ module ApplicationHelper
     render partial: partial if logged_in?
   end
 
+  def before_login(partial)
+    render partial: partial unless logged_in?
+  end
+
   def profile_pic(usr, size = '')
     if usr.photo.present?
       image_tag(usr.photo.to_s, alt: usr.username, class: "pr-2 rounded-circle profile-img #{size}")
