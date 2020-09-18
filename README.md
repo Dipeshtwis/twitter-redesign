@@ -64,10 +64,10 @@ Setup database with:
 
 > Go to config > database.yml
 
-Replace with your ```own``` postgres sql username and password instead of mine
+Replace ```xxx``` with your ```own``` postgres sql username and password instead of mine
 ```
-username: postgres
-password: sudo
+username: xxx
+password: xxx
 ```
 
 > create and migrate the database by these commands
@@ -91,7 +91,7 @@ Open `http://localhost:3000/` in your browser.
 ## To run Test
 
 ~~~ruby
-$ rpsec --format documentation
+$ rspec --format documentation
 
 ~~~
 
