@@ -56,8 +56,37 @@ $ git clone git@github.com:Dipeshtwis/twitter-redesign.git
 $ cd twitter-redesign
 $ bundle install
 $ yarn install --check-files
-$ rails db:migrate
 ~~~
+
+Setup database with:
+
+> make sure you have postgres sql installed and running on your local machine
+
+> Go to config > database.yml
+
+Replace with your ```own``` postgres sql username and password instead of mine
+```
+username: postgres
+password: sudo
+```
+
+> create and migrate the database by these commands
+
+```
+   rails db:create
+   rails db:migrate
+```
+
+### How to run
+
+Start server with:
+
+```
+    rails s
+```
+
+Open `http://localhost:3000/` in your browser.
+
 
 ## To run Test
 
