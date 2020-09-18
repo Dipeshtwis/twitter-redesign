@@ -29,7 +29,7 @@ class UsersController < ApplicationController
     @user = current_user
     @user.update(signup_params)
     if @user.save
-      flash[:notice] = "profile updated!"
+      flash[:notice] = 'profile updated!'
       redirect_to root_path(current_user)
     else
       flash[:alert] = 'Something went wrong ...'

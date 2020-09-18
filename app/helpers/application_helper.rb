@@ -29,7 +29,7 @@ module ApplicationHelper
     if logged_in? && params[:action] == 'index'
       render partial: 'shared/right'
     elsif params[:action] == 'show'
-      render partial: 'shared/profile_right'
+      render partial: 'shared/profile'
     end
   end
 end
