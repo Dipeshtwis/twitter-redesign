@@ -1,6 +1,4 @@
 class UsersController < ApplicationController
-  before_action :require_user, except: %i[new create]
-
   def new
     @user = User.new
   end
@@ -8,6 +6,7 @@ class UsersController < ApplicationController
   def create
     @user = User.create(signup_params)
     if @user.save
+      session[:username] = @user.username
       flash[:notice] = 'Account is created sucessfully'
       redirect_to root_path
     else
@@ -30,8 +29,8 @@ class UsersController < ApplicationController
     @user = current_user
     @user.update(signup_params)
     if @user.save
-      flash[:notice] = "'#{@user.username}' profile updated!"
-      redirect_to profile_path(@user.username)
+      flash[:notice] = "profile updated!"
+      redirect_to root_path(current_user)
     else
       flash[:alert] = 'Something went wrong ...'
       render 'edit'

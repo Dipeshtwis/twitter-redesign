@@ -19,10 +19,13 @@
 
 <h3 class="mt-4"> Suggest Book </h3>
 
-<div class="card mb-5">
+<div class="card mb-3">
     <div class="card-body">
         <%= form_for(@opinion, url: opinion_path) do |f| %>
             <%= f.text_field :text, autofocus: true, class: "form-control", placeholder: "Suggest any book by tweet ..." %>
+            <div class="actions">
+          <%= f.submit class: "btn btn-primary float-right m-3" %>
+        </div>
         <% end %>
     </div>
 </div>
