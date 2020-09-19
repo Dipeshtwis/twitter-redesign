@@ -64,7 +64,7 @@ Setup database with:
 
 > Go to config > database.yml
 
-Replace ```xxx``` with your ```own``` postgres sql username and password instead of mine
+Replace ```xxx``` with your ```own``` postgresql username and password
 ```
 username: xxx
 password: xxx
