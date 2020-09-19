@@ -1,0 +1,49 @@
+ <div class="cover_image bg-gray mb-2 pt-3" >
+<%= cover_pic(@user) %>
+ </div>
+
+<div class="row">
+	<div class="col">
+		<nav class="navbar navbar-expand-lg navbar-light">
+  			<div class="container">
+  				<%= link_to 'Tweet', '#', class: "navbar-brand active border-bottom border-primary" %>
+    			<ul class="navbar-nav mr-auto">
+      			  <li class="nav-item">
+                  <%= link_to 'Photos', '#', class: "nav-link" %>
+      			</li>
+      			<li class="nav-item">
+        		<%= link_to 'Following', '#', class: "nav-link" %>
+      			</li>
+      			 <li class="nav-item">
+                  <%= link_to 'Followers', '#', class: "nav-link" %>
+      			</li>
+      			 <li class="nav-item">
+                  <%= link_to 'Favourites', '#', class: "nav-link" %>
+      			</li>
+      			 <li class="nav-item">
+                  <%= link_to 'Lists', '#', class: "nav-link" %>
+      			</li>
+    			</ul>
+  			</div>
+		</nav>
+</div>
+</div>
+
+<div class="card mb-5 mt-3">
+    <div class="card-body">
+    <h5 class="card-title border-bottom pb-3">SUGGEST BOOK TO <%= @user.fullname.upcase %></h5>
+        <%= form_for(@opinion, url: opinion_path) do |f| %>
+            <%= f.text_field :text, autofocus: true, class: "form-control", placeholder: "Suggest any book by tweet ..." %>
+            <div class="actions">
+          <%= f.submit class: "btn btn-primary float-right m-3" %>
+        </div>
+        <% end %>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title pb-2">ALL BOOKS SUGGESTED BY <%= @user.fullname.upcase %></h5>
+        <%= render @opinions %>
+    </div>
+</div>

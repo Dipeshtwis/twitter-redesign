@@ -1,0 +1,65 @@
+<div class="col-3 offset-7 border-left px-1 bg-light position-fixed pt-3 py-4" >
+<div class="text-center mb-2">
+      <%= follow_me(@user, 'shared/follow') %>
+      
+        <%= profile_pic(@user, 'tweet-pic')%>
+     
+     <div class="user-info">
+        <h5 class="mt-2"><%= link_to @user.fullname, profile_path(@user.username), class: "user-name-p" %> <br><small class="text-gray">@<%= @user.username %></small></h5>
+        <div class="stats border-top border-bottom pt-2 d-flex flex-wrap justify-content-around">
+            <h5><%= @user.opinions.count %> <br><small>Tweets</small></h5>
+            <h5><%= @user.follows.count %> <br><small>Following</small></h5>
+            <h5><%= @user.followers.count %><br><small>Followers</small></h5>
+        </div>
+     </div>
+</div>
+
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Followed by</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Following</a>
+        </li>
+        </ul>
+
+    <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        
+        <% @user.followers.each do |follower| %>
+            <div class="d-flex align-items-center mb-2 mt-2 who-to-follow justify-content-around">
+                    <div class="author">
+                        <%= profile_pic(follower, 'tweet-pic')%>
+                    </div>
+                    <div>
+                        <h6><strong> <%= link_to follower.fullname, profile_path(follower.username), class: "text-dark" %></strong></h6>
+                        <small class="text-gray">@<%= follower.username %></small>
+                    </div>
+                    <div class="ml-5">
+                        <%= follow_me(@user, 'shared/follow') %>
+                    </div>    
+            </div>
+        <% end %>
+    </div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        
+        <% @user.follows.each do |follow| %>
+            <div class="d-flex align-items-center mb-2 mt-2 who-to-follow justify-content-around">
+                    <div class="author">
+                        <%= profile_pic(follow, 'tweet-pic')%>
+                    </div>
+                    <div>
+                        <h6><strong> <%= link_to follow.fullname, profile_path(follow.username), class: "text-dark" %></strong></h6>
+                        <small class="text-gray">@<%= follow.username %></small>
+                    </div>
+                    <div class="ml-5">
+                        <%= follow_me(@user, 'shared/follow') %>
+                    </div>
+                         
+                    </div>
+         <% end %>
+
+    </div>
+    </div>
+
+</div>

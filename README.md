@@ -29,12 +29,18 @@ This project is build for the Ruby on Rails capstone which is based on a redesig
 
 ## Screenshot <a name = "sc"></a>
 
-![screenshot](./app/assets/images/)
+### Home Page
+
+![screenshot](./app/assets/images/Book_Helper.png)
+
+### Profile Page
+
+![screenshot](./app/assets/images/Book_Helper_profile.png)
 
 
 ## Live Demo Link <a name = "ll"></a>
 
-[Live Demo]()
+[Live Demo](https://bookhelpy.herokuapp.com)
 
 
 ## Getting Started <a name = "gs"></a>
@@ -50,13 +56,43 @@ $ git clone git@github.com:Dipeshtwis/twitter-redesign.git
 $ cd twitter-redesign
 $ bundle install
 $ yarn install --check-files
-$ rails db:migrate
 ~~~
+
+Setup database with:
+
+> make sure you have postgres sql installed and running on your local machine
+
+> Go to config > database.yml
+
+Replace ```xxx``` with your ```own``` postgresql username and password
+```
+username: xxx
+password: xxx
+```
+
+> create and migrate the database by these commands
+
+```
+   rails db:create
+   rails db:migrate
+```
+
+### How to run
+
+Start server with:
+
+```
+    rails s
+```
+
+Open `http://localhost:3000/` in your browser.
+
 
 ## To run Test
 
 ~~~ruby
-$ rpsec --format documentation
+$ rails db:migrate RAILS_ENV=test
+$ rspec --format documentation
 
 ~~~
 

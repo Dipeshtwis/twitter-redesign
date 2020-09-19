@@ -1,0 +1,25 @@
+.post-comments-section {
+  margin: 5px;
+  width: 90%;
+  margin-left: 10%;
+
+  .post-comments {
+    position: relative;
+    display: flex;
+    border-top: 1px solid #b3b4b6;
+    border-radius: 3px;
+    margin-bottom: 2px;
+    padding: 10px;
+
+    p {
+      font-size: 1em;
+      width: 90%;
+    }
+
+    span {
+      position: absolute;
+      right: 3px;
+      font-size: 0.8em;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+<div class="d-flex mt-3 pt-3 border-top">
+    <div class="pic">
+    	<%= profile_pic(opinion.author, 'tweet-pic')%>
+    </div>
+    <div class="text ml-3">
+        <h6><strong><%= link_to opinion.author.fullname, profile_path(opinion.author.username) , class: "text-body" %> </strong></h6>
+            <p class="card-text"><%= opinion.text %> </p>
+    </div>
+</div>
+<h6 class="text-center mt-2"><em>All comments</em></h6>
+<div class='post-comments-section'>
+    <% opinion.comments.each do |comment| %>
+      <div class="post-comments">
+        <p>
+          <b><%= comment.user.username %>:</b> <%= comment.content %>
+        </p>
+        <span> <%= comment.created_at.strftime("%Y/%m/%d") %> </span>
+      </div>
+    <% end %>
+
+    <%= form_for(opinion.comments.new, url: opinion_comments_path(opinion)) do |form| %>
+      <%= form.text_field :content, id: :comment_content, class: 'form-control mb-2', placeholder: 'Add new Comment' %>
+      <%= form.submit 'Comment', class: 'btn btn-secondary' %>
+    <% end %>
+  </div>

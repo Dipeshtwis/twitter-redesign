@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+	<div class="d-sm-hidden col-md-6 background"></div>
+	  <div class="col-sm-12 col-md-6">
+		<h2 class="text-center">Sign In</h2>
+
+<%= form_for(:session, url: sign_in_path) do |f| %>
+  <div class="form-group">
+     <%= f.text_field :username, autofocus: true, placeholder: "Enter a username", class: "form-control"  %>
+ </div>
+
+ <div class="actions">
+    <%= f.submit 'Login', class: "btn btn-primary" %>
+    <p><small><em>Don't have an account?</em></small> <%= link_to 'Signup', new_user_path %>
+    </p>
+</div>
+<% end %>
+		</div>
+	</div>
+</div>
